@@ -8,7 +8,8 @@ import Iron from '@/public//iron.svg'
 import Tape from '@/public//measuring-tape.svg'
 import Image from 'next/image'
 
-export default function BlogPost({ params }: { params: { id: string } }) {
+export default async function BlogPost(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const post = posts.find(p => p.id === parseInt(params.id))
 
   if (!post) {
