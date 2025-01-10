@@ -9,7 +9,8 @@ const sendflowers = Send_Flowers({ weight: "400", subsets: ['latin'] });
 
 const POSTS_PER_PAGE = 6
 
-export default function Blog({ searchParams }: { searchParams: { page?: string, tags?: string } }) {
+export default async function Blog(props: { searchParams: Promise<{ page?: string, tags?: string }> }) {
+  const searchParams = await props.searchParams;
   const currentPage = Number(searchParams.page) || 1
   const selectedTags = searchParams.tags ? searchParams.tags.split(',') : []
 
