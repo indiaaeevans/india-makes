@@ -67,50 +67,6 @@
 }
 
 /* Cherry Blossom Background Styles */
-@keyframes float1 {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-
-  25% {
-    transform: translate(100px, -150px) rotate(90deg);
-  }
-
-  50% {
-    transform: translate(-50px, -300px) rotate(180deg);
-  }
-
-  75% {
-    transform: translate(-150px, -450px) rotate(270deg);
-  }
-
-  100% {
-    transform: translate(0, -600px) rotate(360deg);
-  }
-}
-
-@keyframes float2 {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-
-  25% {
-    transform: translate(-120px, -200px) rotate(90deg);
-  }
-
-  50% {
-    transform: translate(60px, -400px) rotate(180deg);
-  }
-
-  75% {
-    transform: translate(100px, -600px) rotate(270deg);
-  }
-
-  100% {
-    transform: translate(0, -800px) rotate(360deg);
-  }
-}
-
 .background-container {
   position: fixed;
   top: 0;
@@ -122,159 +78,102 @@
 }
 
 .cherry-blossom {
-  content: '';
   position: absolute;
   width: 30px;
   height: 30px;
 }
 
-/* cherry blossom variations */
-.blossom-1 {
-  left: 10%;
-  top: 15%;
+/* Animation keyframes for different directions */
+@keyframes floatUp {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(100px, -25vh) rotate(90deg); }
+  50% { transform: translate(-50px, -50vh) rotate(180deg); }
+  75% { transform: translate(-150px, -75vh) rotate(270deg); }
+  100% { transform: translate(0, -100vh) rotate(360deg); }
+}
+
+@keyframes floatDown {
+  0% { transform: translate(0, -100vh) rotate(0deg); }
+  25% { transform: translate(-120px, -75vh) rotate(90deg); }
+  50% { transform: translate(60px, -50vh) rotate(180deg); }
+  75% { transform: translate(100px, -25vh) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes floatRight {
+  0% { transform: translate(-100vw, 0) rotate(0deg); }
+  25% { transform: translate(-75vw, -150px) rotate(90deg); }
+  50% { transform: translate(-50vw, 50px) rotate(180deg); }
+  75% { transform: translate(-25vw, -100px) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes floatLeft {
+  0% { transform: translate(100vw, 0) rotate(0deg); }
+  25% { transform: translate(75vw, 150px) rotate(90deg); }
+  50% { transform: translate(50vw, -50px) rotate(180deg); }
+  75% { transform: translate(25vw, 100px) rotate(270deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Blossom variations with different starting positions and animations */
+.blossom-1 { 
+  bottom: -40px; 
+  left: 10%; 
   transform: scale(0.6);
-  animation: float1 22s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  animation: floatUp 22s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
-
-.blossom-2 {
-  left: 25%;
-  top: 35%;
+.blossom-2 { 
+  top: -40px; 
+  left: 25%; 
   transform: scale(1.2);
-  animation: float2 25s infinite cubic-bezier(0.2, 0, 0.8, 1);
+  animation: floatDown 25s infinite cubic-bezier(0.2, 0, 0.8, 1);
 }
-
-.blossom-3 {
-  left: 45%;
-  top: 25%;
+.blossom-3 { 
+  bottom: -40px; 
+  left: 45%; 
   transform: scale(0.8);
-  animation: float1 20s infinite cubic-bezier(0.6, 0, 0.4, 1);
+  animation: floatUp 20s infinite cubic-bezier(0.6, 0, 0.4, 1);
 }
-
-.blossom-4 {
-  left: 65%;
-  top: 60%;
+.blossom-4 { 
+  top: 30%; 
+  left: -40px; 
   transform: scale(1.1);
-  animation: float2 28s infinite cubic-bezier(0.3, 0, 0.7, 1);
+  animation: floatRight 28s infinite cubic-bezier(0.3, 0, 0.7, 1);
 }
-
-.blossom-5 {
-  left: 80%;
-  top: 45%;
+.blossom-5 { 
+  top: -40px; 
+  left: 80%; 
   transform: scale(0.7);
-  animation: float1 24s infinite cubic-bezier(0.5, 0, 0.5, 1);
+  animation: floatDown 24s infinite cubic-bezier(0.5, 0, 0.5, 1);
 }
-
-.blossom-6 {
-  left: 15%;
-  top: 70%;
+.blossom-6 { 
+  top: 60%; 
+  right: -40px; 
   transform: scale(0.9);
-  animation: float2 26s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  animation: floatLeft 26s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
-
-.blossom-7 {
-  left: 35%;
-  top: 85%;
+.blossom-7 { 
+  bottom: -40px; 
+  left: 35%; 
   transform: scale(1.3);
-  animation: float1 23s infinite cubic-bezier(0.2, 0, 0.8, 1);
+  animation: floatUp 23s infinite cubic-bezier(0.2, 0, 0.8, 1);
 }
-
-.blossom-8 {
-  left: 50%;
-  top: 40%;
+.blossom-8 { 
+  top: 40%; 
+  left: -40px; 
   transform: scale(0.5);
-  animation: float2 27s infinite cubic-bezier(0.6, 0, 0.4, 1);
+  animation: floatRight 27s infinite cubic-bezier(0.6, 0, 0.4, 1);
 }
-
-.blossom-9 {
-  left: 70%;
-  top: 20%;
+.blossom-9 { 
+  top: -40px; 
+  left: 70%; 
   transform: scale(1.0);
-  animation: float1 21s infinite cubic-bezier(0.3, 0, 0.7, 1);
+  animation: floatDown 21s infinite cubic-bezier(0.3, 0, 0.7, 1);
 }
-
-.blossom-10 {
-  left: 85%;
-  top: 75%;
+.blossom-10 { 
+  top: 20%; 
+  right: -40px; 
   transform: scale(0.8);
-  animation: float2 29s infinite cubic-bezier(0.5, 0, 0.5, 1);
+  animation: floatLeft 29s infinite cubic-bezier(0.5, 0, 0.5, 1);
 }
-
-/* .blossom-1 {
-  left: 10%;
-  top: 15%;
-  transform: scale(0.6);
-  animation-delay: -2s;
-}
-
-.blossom-2 {
-  left: 25%;
-  top: 35%;
-  transform: scale(1.2);
-  animation-delay: -5s;
-}
-
-.blossom-3 {
-  left: 45%;
-  top: 25%;
-  transform: scale(0.8);
-  animation-delay: -8s;
-}
-
-.blossom-4 {
-  left: 65%;
-  top: 60%;
-  transform: scale(1.1);
-  animation-delay: -11s;
-}
-
-.blossom-5 {
-  left: 80%;
-  top: 45%;
-  transform: scale(0.7);
-  animation-delay: -14s;
-}
-
-.blossom-6 {
-  left: 15%;
-  top: 70%;
-  transform: scale(0.9);
-  animation-delay: -3s;
-}
-
-.blossom-7 {
-  left: 35%;
-  top: 85%;
-  transform: scale(1.3);
-  animation-delay: -6s;
-}
-
-.blossom-8 {
-  left: 50%;
-  top: 40%;
-  transform: scale(0.5);
-  animation-delay: -9s;
-}
-
-.blossom-9 {
-  left: 70%;
-  top: 20%;
-  transform: scale(1.0);
-  animation-delay: -12s;
-}
-
-.blossom-10 {
-  left: 85%;
-  top: 75%;
-  transform: scale(0.8);
-  animation-delay: -15s;
-} */
-
-/* @keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  100% {
-    transform: translateY(-100vh) rotate(360deg);
-  }
-} */
