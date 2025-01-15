@@ -27,29 +27,28 @@ export default async function Blog(props: { searchParams: Promise<{ page?: strin
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className={`${sendflowers.className} text-6xl font-bold mb-8 text-center`}
-      style={{ color: 'var(--cherry-blossom)' }}>
+      <h1 className={`${sendflowers.className} text-6xl font-bold mb-8 text-center`}>
         Journal
       </h1>
       <TagFilter tags={allTags} />
       <div className="space-y-12 mb-12">
         {currentPosts.map((post, index) => (
-          <article key={post.id} className="bg-white dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-50 rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform">
+          <article key={post.id} className="bg-white dark:bg-stone-900 bg-opacity-70 dark:bg-opacity-50 rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform">
             <div className="flex items-center mb-4">
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl ${getIconBackground(index)}`}>
+              <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-stone-200 dark:bg-transparent`}>
                 <Needle
                   width={48}
                   height={48}
                 />
               </div>
               <h2 className="text-2xl font-semibold ml-4">
-                <Link href={`/blog/${post.id}`} className="text-gray-800 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                <Link href={`/blog/${post.id}`} className="text-gray-800 dark:text-gray-200 hover:text-red-500 dark:hover:text-red-300 transition-colors">
                   {post.title}
                 </Link>
               </h2>
             </div>
-            <p className="text-purple-600 dark:text-purple-400 mb-4">{post.date}</p>
-            <p className="text-lg text-gray-700 dark:text-gray-200 mb-4">{post.excerpt}</p>
+            <p className="text-stone-700 dark:text-stone-300 mb-4">{post.date}</p>
+            <p className="text-lg text-stone-700 dark:text-stone-200 mb-4">{post.excerpt}</p>
             <div className="flex flex-wrap gap-2">
               {post.tags.map(tag => (
                 <span key={tag} className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">
@@ -67,11 +66,11 @@ export default async function Blog(props: { searchParams: Promise<{ page?: strin
 
 function getIconBackground(index: number) {
   const backgrounds = [
-    'bg-pink-200 dark:bg-transparent',
-    'bg-purple-200 dark:bg-transparent',
-    'bg-blue-200 dark:bg-transparent',
-    'bg-green-200 dark:bg-transparent',
-    'bg-yellow-200 dark:bg-transparent'
+    'bg-red-500 dark:bg-transparent',
+    'bg-lime-200 dark:bg-lime-200',
+    'bg-cyan-800 dark:bg-transparent',
+    'bg-rose-900 dark:bg-transparent',
+    // 'bg-orange-400 dark:bg-transparent'
   ]
   return backgrounds[index % backgrounds.length]
 }

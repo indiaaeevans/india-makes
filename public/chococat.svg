@@ -41,7 +41,7 @@
       }
 
       .cls-2 {
-        fill: var(--cherry-blossom);
+        fill: var(--vivid-fuschia);
       }
 
       .cls-3 {
@@ -53,7 +53,7 @@
       }
 
       .cls-5 {
-        fill: var(--cherry-blossom);
+        fill: var(--vivid-fuschia);
       }
     </style>
   </defs>

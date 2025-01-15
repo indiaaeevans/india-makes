@@ -2,8 +2,8 @@ import Chococat from '@/public//chococat.svg'
 
 export default function About() {
   return (
-    <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-50 rounded-lg p-8 shadow-lg">
-      <h1 className="text-4xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 dark:from-pink-400 dark:to-purple-400">
+    <div className="max-w-2xl mx-auto bg-white dark:bg-stone-950 bg-opacity-70 dark:bg-opacity-25 rounded-lg p-8 shadow-lg">
+      <h1 className="text-4xl font-bold mb-6 text-center bg-clip-text">
         About
       </h1>
       <div className="prose dark:prose-invert prose-lg mx-auto">

@@ -18,16 +18,16 @@ export default async function BlogPost(props: { params: Promise<{ id: string }> 
 
   return (
     <div className="max-w-3xl mx-auto bg-white dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-50 rounded-lg p-8 shadow-lg">
-      <h1 className="text-4xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500 dark:from-pink-400 dark:to-purple-400">
+      <h1 className="text-4xl font-bold mb-4 text-center bg-clip-text text-red-500 dark:text-red-300">
         {post.title}
       </h1>
-      <p className="text-purple-600 dark:text-purple-400 mb-4 text-center">{post.date}</p>
+      <p className="text-stone-600 dark:text-stone-400 mb-4 text-center">{post.date}</p>
       <div className="flex flex-wrap gap-2 justify-center mb-8">
         {post.tags.map(tag => (
           <Link 
             key={tag} 
             href={`/blog?tags=${tag}`}
-            className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm hover:bg-purple-200 dark:hover:bg-purple-700 transition-colors"
+            className="px-3 py-1 bg-stone-200 text-gray-800 dark:bg-stone-700 dark:text-gray-300 hover:bg-stone-400 dark:hover:bg-stone-600 rounded-full text-sm transition-colors"
           >
             {tag}
           </Link>

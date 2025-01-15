@@ -40,8 +40,8 @@ export default function TagFilter({ tags }: TagFilterProps) {
             onClick={() => handleTagClick(tag)}
             className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
               selectedTags.includes(tag)
-                ? 'bg-purple-500 text-white'
-                : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-purple-200 dark:hover:bg-purple-700'
+                ? 'bg-lime-200 text-gray-800'
+                : 'bg-stone-200 text-gray-800 dark:bg-stone-700 dark:text-gray-300 hover:bg-stone-400 dark:hover:bg-stone-600'
             }`}
           >
             {tag}
