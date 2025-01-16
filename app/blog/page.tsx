@@ -3,9 +3,6 @@ import { posts, getAllTags } from '../data/posts'
 import Pagination from '@/components/Pagination'
 import TagFilter from '@/components/TagFilter'
 import Needle from '@/public//needle.svg'
-import { Send_Flowers } from 'next/font/google';
-
-const sendflowers = Send_Flowers({ weight: "400", subsets: ['latin'] });
 
 const POSTS_PER_PAGE = 6
 
@@ -27,7 +24,7 @@ export default async function Blog(props: { searchParams: Promise<{ page?: strin
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className={`${sendflowers.className} text-6xl font-bold mb-8 text-center`}>
+      <h1 className="text-6xl font-bold mb-8 text-center">
         Journal
       </h1>
       <TagFilter tags={allTags} />

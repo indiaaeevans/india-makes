@@ -36,7 +36,7 @@ export default function RootLayout({
           <main className="container mx-auto px-4 flex-grow">
             {children}
           </main>
-          <div className="w-full h-2 bg-red-500 mt-12 ribbon-pattern"></div>
+          <div className="w-full h-2 bg-red-500 dark:bg-lime-300 mt-12 ribbon-pattern"></div>
           <footer className="font-mono py-6 mt-0 text-center text-sm text-black dark:text-red-200 bg-stone-600 dark:bg-stone-900 bg-opacity-50">
             © {new Date().getFullYear()} India Makes. All rights reserved.
           </footer>

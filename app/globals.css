@@ -14,7 +14,7 @@
 }
 
 .dark body {
-  --cherry-blossom: ivory;
+  --cherry-blossom: #e9d5ff;
   --vivid-fuschia: #e9d5ff;
 }
 
@@ -186,4 +186,8 @@
   background-size: 48px;
   background-position: 0 0, 24px 0;
   background-repeat: repeat-x;
+}
+
+.makes {
+  letter-spacing: -6px;
 }

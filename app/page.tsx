@@ -1,16 +1,14 @@
-import { Send_Flowers } from "next/font/google";
 import Machine from '@/public//sewing-machine.svg'
 import Shears from '@/public//shears.svg'
 import Needle from '@/public//needle.svg'
 import Iron from '@/public//iron.svg'
 import Tape from '@/public//measuring-tape.svg'
-const sendflowers = Send_Flowers({ weight: "400", subsets: ['latin'] });
 
 export default function Home() {
   return (
     <div className="max-w-2xl mx-auto py-16 text-center">
-      <h1 className={`${sendflowers.className} text-8xl mb-1 text-red-500 dark:text-red-300`}>
-        india makes
+      <h1 className={`text-6xl text-6xl sm:text-8xl mb-1 text-red-500 dark:text-red-300`}>
+        india<span className="font-bold makes">/makes</span>
       </h1>
       <p className="text-2xl mb-8 text-black dark:text-lime-100">
         A sewing and all things creative journal
