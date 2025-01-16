@@ -1,4 +1,4 @@
-import CherryBlossom from '@/public//cherry-blossom.svg'
+import CherryBlossom from '@/public/cherry-blossom.svg'
 
 export default function CherryBlossomBackground() {
   return (

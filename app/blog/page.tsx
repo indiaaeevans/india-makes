@@ -32,7 +32,7 @@ export default async function Blog(props: { searchParams: Promise<{ page?: strin
       </h1>
       <TagFilter tags={allTags} />
       <div className="space-y-12 mb-12">
-        {currentPosts.map((post, index) => (
+        {currentPosts.map((post) => (
           <article key={post.id} className="bg-white dark:bg-stone-900 bg-opacity-70 dark:bg-opacity-50 rounded-lg p-6 shadow-lg transform hover:scale-105 transition-transform">
             <div className="flex items-center mb-4">
               <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-stone-200 dark:bg-transparent`}>
@@ -63,15 +63,3 @@ export default async function Blog(props: { searchParams: Promise<{ page?: strin
     </div>
   )
 }
-
-function getIconBackground(index: number) {
-  const backgrounds = [
-    'bg-red-500 dark:bg-transparent',
-    'bg-lime-200 dark:bg-lime-200',
-    'bg-cyan-800 dark:bg-transparent',
-    'bg-rose-900 dark:bg-transparent',
-    // 'bg-orange-400 dark:bg-transparent'
-  ]
-  return backgrounds[index % backgrounds.length]
-}
-
